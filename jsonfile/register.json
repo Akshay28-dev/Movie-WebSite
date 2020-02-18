@@ -1,0 +1,11 @@
+[
+    {
+        "id": "4147175b-6137-4028-880e-fbd3a2a258dc",
+        "name": "",
+        "email": "",
+        "phno": "",
+        "password": "$2a$10$OYFPk/7lqMSZQgeIXfzj6OCM3.XiTnVp8Nmu8IEgaSt7UFr//Jz9u",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQxNDcxNzViLTYxMzctNDAyOC04ODBlLWZiZDNhMmEyNThkYyIsImlhdCI6MTU4MjA0MjAwMiwiZXhwIjoxNTgyMDQ1NjAyfQ.4_UuFK51tCPZqNYw0HYJT6shXJb6rSXL1TInqBNALvQ",
+        "createdAt": "2020-02-18T16:06:42.803Z"
+    }
+]

@@ -1,0 +1,44 @@
+<div class="col-md-2">
+  <div style="position: sticky; top: 0" id="movie-genre">
+    <div class="mt-4" style="border: none;">
+      <img src ="/images/logo.png" class="logo" />
+      <div class="logo-title">Movie Time</div>
+    </div>
+    <hr />
+    <div class="list-group">
+      <div class="group-item">
+        <div class="group-box">
+          <a href="/popular">
+            <div class="group-title">Popularity</div>
+          </a>
+        </div>
+      </div>
+      
+      <div class="group-item">
+        <div class="group-box">
+          <a href="/top_rated">
+            <div class="group-title">Top Rated</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="group-item">
+        <div class="group-box">
+          <a href="/upcoming">
+            <div class="group-title">upcoming Movies</div>
+          </a>
+        </div>
+      </div>
+      <hr/>
+      {{#each genre}}
+      <div class="group-item">
+        <div class="group-box">
+          <a href="/genre/{{this.name}}?id={{this.id}}">
+            <div class="group-title">{{this.name}}</div>
+          </a>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

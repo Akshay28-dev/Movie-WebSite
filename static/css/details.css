@@ -1,0 +1,206 @@
+body{
+  background-color: #212529;
+}
+
+.row{
+  margin-right: 0px;
+}
+
+.tagline{
+  color: grey;
+  font-size: 14px;
+  line-height: normal;
+}
+
+.grad1 {
+  height: 550px;
+  width: 1080px;
+  /* background-image:linear-gradient(to right, #212529 30%, transparent ), url('https://image.tmdb.org/t/p/w500/5BwqwxMEjeFtdknRV792Svo0K1v.jpg'); */
+  background-size: cover;
+}
+
+.fa-play-circle{
+  color: white;
+}
+
+.play-icon{
+  font-size:80px;
+  color:blue;
+  position: absolute;
+}
+
+.play-icon:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.playMoviesSection{
+  position: relative;
+}
+
+.favourite{
+  width: 160px;
+}
+
+.favourite:hover .fa-heart {
+  color: red;
+  /* background-color: red; */
+}
+
+.left{
+  float: left; 
+  width: auto;
+  height: 50px;
+}
+
+#left-button{
+  background-color: transparent;
+  border: none;
+  height: 50px;
+  color: grey;
+  cursor: pointer;
+}
+
+#left-button:hover{
+  color: white;
+}
+
+#right-button{
+  background-color: transparent;
+  border: none;
+  height: 60px;
+  color: grey;
+  cursor: pointer;
+}
+
+#right-button:hover{
+  color: white;
+}
+
+.internal{
+width: 50px;
+height: 60px;
+/* border: 1px solid black; */
+border-radius: 50%;
+display: inline-block;
+cursor: pointer;
+margin-left: 10px;
+}
+
+.center{
+float: left; 
+width: 93.1%;
+height: 60px;
+/* border: 1px solid black; */
+margin-top: 2px;
+margin-left: 4px;
+margin-right: 4px;
+overflow: hidden;
+/*will change this to hidden later to deny scolling to user*/
+white-space: nowrap;
+}
+.cast-image{
+  width: 55px;
+  height:55px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.right{
+  float: right; 
+  width: auto;
+  height: 50px;
+}
+
+.keywords{
+  width: auto;  
+  height: 25px;
+  border-color: 10px solid grey;
+  /* background-color: white; */
+  margin-top: 5px;
+  margin-left: 2%;
+  color: #6962f0;
+  display: inline-block;
+  text-align: center;
+  font-size: 18px;
+}
+
+.keywords:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  border: 2px solid #93f5bf;
+  border-radius: 10%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.similarcenter{
+  float: left; 
+  width: 90.1%;
+  height: 200px;
+  /* border: 1px solid black; */
+  margin-top: 2px;
+  /* margin-left: 4px;
+  margin-right: 4px; */
+  overflow: hidden;
+  /*will change this to hidden later to deny scolling to user*/
+  white-space: nowrap;
+}
+
+.rightsimilar{
+  float: right; 
+  width: 50px;
+  height: 200px;
+  /* background-color: white; */
+  opacity: 2;
+}
+
+.leftsimilar{
+  float: left; 
+  width: 50px;
+  height: 200px; 
+}
+
+.title_based_poster{
+  height: 200px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.internal-similar{
+  width: 15%;
+  height: 200px;
+  /* border: 1px solid black; */
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 10px;
+  }
+
+#similarMovies{
+  width: 100px;
+}
+
+#left-buttons{
+  background-color: transparent;
+  border: none;
+  height: 50px;
+  color: grey;
+  cursor: pointer;
+}
+
+#left-buttons:hover{
+  color: white;
+}
+
+#right-buttons{
+  background-color: transparent;
+  border: none;
+  height: 60px;
+  color: grey;
+  cursor: pointer;
+}
+
+#right-buttons:hover{
+  color: white;
+}

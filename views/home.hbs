@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Movi List | Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/home.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      {{>header}}
+
+       <div class="col-md-10">
+        <nav class="navbar ">
+          <a class="navbar-brand"></a>
+          <div class="my-sm-0">
+            <a class="navbar-brand" href="/register">Login</a>
+          </div>
+        </nav>
+
+        <div id="genreTitile" style="margin-top: 20px;margin-left: 20px;">
+            <h4 style="font-size: 30px;color:red" >{{currentName}}</h4>
+        </div>
+        <hr />
+        <form method="POST" action="{{Prevpage}}">
+          <button class="btn btn-outline-primary btn-sm" style="position: absolute;margin-left: 3%;display: block" id="prev">
+            <i class='far fa-hand-point-left'></i>&nbsp;&nbsp;&nbsp;Previous
+          </button>
+        </form>
+
+        <form method="POST" action="  {{Nextpage}}">
+          <button class="btn btn-outline-primary btn-sm"  style="position: absolute;right: 0; margin-right: 3%;display: block" id="next">
+            Next&nbsp;&nbsp;&nbsp;<i class='far fa-hand-point-right'></i>
+          </button>
+        </form>
+
+        <div class="container row mt-5" style="margin-left: 10px">
+          {{#each movie}}
+          <div class="col-sm-3 mt-3 mb-3" >
+            <a href="/movies/{{this.id}}">
+              <img src="https://image.tmdb.org/t/p/original{{this.poster_path}}" style="width: 13rem;" class="rounded"/>
+            </a>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</html>

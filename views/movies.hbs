@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Movi List | Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="/css/details.css">
+
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      {{>header}}
+
+       <div class="col-md-10">
+        <nav class="navbar ">
+          <a class="navbar-brand"></a>
+          <div class="my-sm-0">
+            <a class="navbar-brand" href="/register">Login</a>
+          </div>
+        </nav>
+        <div class="mt-2" style="margin-left: 1%;margin-right: 1%;margin-bottom: 2%;border: none;color: white">
+    <section id="sectionBanner">
+      <div class="row ml-2 mr-2">
+          <div class="rounded grad1" style='background-image: linear-gradient(to right, #343a40 30%, transparent ), url("https://image.tmdb.org/t/p/original{{movie.backdrop_path}}");'>
+            <div style="width: 500px;">
+              <div class="mt-3 ml-3">
+                <div  id="titleH1">
+                  <h1>{{movie.original_title}}</h1>
+                  <span class="tagline">{{movie.overview}}</span>
+                </div>
+                <section>
+                  <div class="playMoviesSection mt-4 ml-4">
+                    <i class="fa fa-play-circle play-icon"></i>
+                    <div style="position: absolute;margin-left: 30%;margin-top: 4%;">
+                      <button class="btn btn-primary"  style="position: relative;">Watch Trailer</button>
+                      <button class="btn btn-primary favourite" style="position: absolute; margin-left: 10%;">
+                        <i class="fa fa-heart"></i>&nbsp;&nbsp;Add Favourite
+                      </button>
+                    </div>
+                  </div>
+                </section>
+                
+                <section style="margin-top: 25%; margin-left: 6%;" id="dataMin">
+                  <div class="row" style="color: white" id="totalmin">
+                    <div class="col-sm-4">
+                      Total Minutes
+                    </div>
+                    <div class="col-sm-1">:</div>
+                    <div class="col-sm-4">
+                      {{movie.runtime}}
+                    </div>
+                  </div>
+                  <div class="row" style="color: white" id="releasedDate">
+                    <div class="col-sm-4">
+                      Released Date
+                    </div>
+                    <div class="col-sm-1">:</div>
+                    <div class="col-sm-4">
+                      {{movie.release_date}}
+                    </div>
+                  </div>
+                </section>
+                <!-- The Cast Section -->
+                <section class="mt-4">
+                  <h5>Movie Cast</h5>
+                  <div class="mt-3">
+                    <div class="left">
+                      <a id="left-button">
+                        <i class='fas fa-angle-left' style="height: 28px;margin-top: 20px;font-size: 22px;"></i>
+                      </a>
+                    </div>
+                     <div class="center" id="content">
+                      {{#each credit}}
+                        {{#if this.profile_path}}
+                          <div class="internal">
+                            <img src="https://image.tmdb.org/t/p/original{{this.profile_path}}"
+                              class="cast-image"
+                              data-toggle="popover" title="{{this.name}} as {{this.character}}" data-content="{{this.character}}"
+                            />
+                          </div>
+                          
+                        {{else}}
+                          <div class="internal">
+                            <img src="/images/profile.png"
+                                class="cast-image"
+                                data-toggle="popover" title="{{this.name}} as {{this.character}}" data-content="{{this.character}}"
+                            />
+                          </div>
+                        {{/if}}
+                      {{/each}}
+                      
+                  </div>
+                  <div class="right">
+                        <a id="right-button">
+                          <i class='fas fa-angle-right' style="height: 28px;margin-top: 20px;font-size: 22px;"></i>
+                        </a>
+                      </div>
+                </section>
+              </div>
+                
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+  </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/movies.js"></script>
+
+</html>
